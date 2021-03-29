@@ -1,7 +1,7 @@
 from random import randint
 n = 3
-m = 4
-k = 3
+m = 5
+k = 7
 
 t = []
 for n1 in range(n):
@@ -24,9 +24,10 @@ for n3 in range(n):
         ind_x[n3].append([])
         for k3 in range(k):
             if t[n3][m3][k3] == max_el:
-                ind_x = t[n3][m3][k3]
+                print('Индекс макс.значений матрицы:', n3, m3, k3)
 
 print(t)
 print(max_el)
-print(ind_x)
+
+
 
