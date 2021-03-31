@@ -1,33 +1,42 @@
-from random import randint
-n = 5 
-m = 5 
-
-a = []
+import random
+n = 3
+m = 3
+matrix = []
 
 for i in range(n):
-    a.append([])
+    matrix.append([])
     for j in range(m):
-        a[i].append(randint(-5, 5))
+        matrix[i]. append(random.randint(-9,9))
+
 for i in range(n):
-    print("")
-    for j in range(m):
-        print(a[i][j], end=' ')
+     print('')
+     for j in range(m):
+        print(matrix[i][j], end=' ')
 
-
-b = 0
-for i in range(n):
-    for j in range(m):
-        if a[i][j] > 0:
-            b += 1
-
-c = 0
 for i in range(n):
     for j in range(m):
-        if a[i][j] < 0:
-            c += 1
+        if matrix[i][j] % 2 == 0 and matrix[i][j] != 0 :
+            print('\nЧетные числа:', matrix[i][j])
 
+zero = 0
+for i in range(n):
+    for j in range(m):
+        if matrix[i][j] == 0:
+            zero += 1
 
-print('\n')
-print('Колл положительных', b)
-print('Колл отрицательных', c)
+minus = 0
+for i in range(n):
+    for j in range(m):
+        if matrix[i][j] <= 0:
+            minus += 1
 
+plus = 0
+for i in range(n):
+    for j in range(m):
+        if matrix[i][j] >= 0:
+            plus += 1
+
+print(' ')
+print('Количество нулей', zero)
+print('Количество отрицательных:', minus)
+print('Количество положительных:', plus)
